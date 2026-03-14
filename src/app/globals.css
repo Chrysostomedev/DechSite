@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --charbon: #1C1C1A;
+  --or-naturel: #D4A843;
+  --vert-foret: #2D5A27;
+  --creme: #F5ECD7;
+  --brun-coco: #6B3A2A;
+  --blanc-casse: #FAFAF5;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--charbon);
+  color: var(--blanc-casse);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: var(--or-naturel); color: var(--charbon); }
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--charbon); }
+::-webkit-scrollbar-thumb { background: var(--or-naturel); border-radius: 3px; }
