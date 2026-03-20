@@ -1,24 +1,16 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/layout/Navbar";
-import Footer from "@/components/layout/Footer";
 
 export const metadata: Metadata = {
-  title: "COCDECH — Coco D'Or Bio | Valorisation des déchets de coco",
+  title: "COCO D'OR BIO — Recyclage & Revalorisation des Déchets | Côte d'Ivoire",
   description:
-    "COCDECH transforme les déchets de noix de coco en charbon écologique de qualité. Marque Coco D'Or Bio — Abidjan, Côte d'Ivoire.",
-  keywords: ["charbon coco", "écologie", "Côte d'Ivoire", "Abidjan", "bio", "recyclage", "coco d'or"],
-  openGraph: {
-    title: "COCDECH — Coco D'Or Bio",
-    description: "Le charbon écologique ivoirien né des déchets de coco.",
-    locale: "fr_CI",
-    type: "website",
-  },
+    "COCO D'OR BIO, entreprise ivoirienne spécialisée dans la collecte, l'assainissement et la revalorisation des déchets.",
+  keywords: ["recyclage", "déchets", "Côte d'Ivoire", "assainissement", "revalorisation", "coco d'or bio"],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="fr">
+    <html lang="fr" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
@@ -27,12 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           rel="stylesheet"
         />
       </head>
-      <body>
-        <div className="grain-overlay" aria-hidden="true" />
-        <Navbar />
-        <main>{children}</main>
-        <Footer />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
